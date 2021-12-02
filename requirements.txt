@@ -1,3 +1,5 @@
 opencv-python 
 opencv_contrib-python
 imutils
+numpy
+kivy

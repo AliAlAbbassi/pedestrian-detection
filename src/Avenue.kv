@@ -1,0 +1,68 @@
+#:kivy 2.0.0
+Root:
+    # text_input: text_input
+    Label:
+        id:title 
+        markup: True
+        text: "[b]Avenue[/b]"
+        font_size: 50
+        center_y: self.height/2
+
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: 'Load Image'
+                on_release: root.show_load()
+            Button:
+                text: 'Initiate Pedestrian Detection'
+                on_release: root.intiate_pedestrian_detection()
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            path: root.getPath() 
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.path, filechooser.selection)
+
+# <SaveDialog>:
+#     text_input: text_input
+#     BoxLayout:
+#         size: root.size
+#         pos: root.pos
+#         orientation: "vertical"
+#         FileChooserListView:
+#             id: filechooser
+#             on_selection: text_input.text = self.selection and self.selection[0] or ''
+
+#         TextInput:
+#             id: text_input
+#             size_hint_y: None
+#             height: 30
+#             multiline: False
+
+#         BoxLayout:
+#             size_hint_y: None
+#             height: 30
+#             Button:
+#                 text: "Cancel"
+#                 on_release: root.cancel()
+
+#             Button:
+#                 text: "Save"
+#                 on_release: root.save(filechooser.path, text_input.text)
