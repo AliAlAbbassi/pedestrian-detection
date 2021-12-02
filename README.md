@@ -1,5 +1,9 @@
 # pedestrian-detection
 
+Quick little app in kivy python for pedestrian detection using Opencv Python ProjectGurukul
+
+### screens shots
+
 ![](https://cdn.discordapp.com/attachments/845561994022879264/916104783180468284/unknown.png)
 ![](https://cdn.discordapp.com/attachments/845561994022879264/916104907386404934/unknown.png)
 ![](https://cdn.discordapp.com/attachments/845561994022879264/916104988277755944/unknown.png)
